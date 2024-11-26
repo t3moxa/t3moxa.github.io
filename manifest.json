@@ -1,12 +1,23 @@
   {
   "lang": "en",
-  "dir": "ltr",
   "name": "This is my awesome PWA",
   "short_name": "myPWA",
   "icons": [
     {
-      "src": "/icon.png",
+      "src": "/icons/icon96.png",
       "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+	{
+      "src": "/icons/icon912.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+	{
+      "src": "/icons/icon512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
