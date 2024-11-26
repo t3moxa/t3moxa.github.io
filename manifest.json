@@ -2,7 +2,7 @@
   "lang": "en",
   "name": "This is my awesome PWA",
   "short_name": "myPWA",
-  "id": "catPVA/v9"
+  "id": "catPVA/v10",
   "theme_color": "#1a1a1a",
   "background_color": "#1a1a1a",
   "start_url": "/",
