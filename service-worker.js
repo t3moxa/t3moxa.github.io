@@ -10,6 +10,7 @@ self.addEventListener('install', event => {
 				'/icons/icon192.png'
 				'/icons/icon512.png'
 				'/icons/favicon.ico'
+				'/icons/cat.jpg'
             ]);
         })
     );

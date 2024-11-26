@@ -1,8 +1,8 @@
   {
-  "lang": "en",
-  "name": "This is my awesome PWA",
-  "short_name": "myPWA",
-  "id": "catPWA/v12",
+  "lang": "ru",
+  "name": "Кот-ПВА",
+  "short_name": "КПВА",
+  "id": "catPWA/v13",
   "theme_color": "#1a1a1a",
   "background_color": "#1a1a1a",
   "start_url": "/",

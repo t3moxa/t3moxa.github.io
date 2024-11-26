@@ -1,6 +1,6 @@
 body {
     font-family: Helvetica, sans-serif;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -14,4 +14,18 @@ h1 {
 
 p {
     color: #666;
+}
+
+.container {
+	display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat {
+	display: grid;
+    justify-content: center;
+    align-items: center;
+	width: 736px;
+	margin: 0 auto
 }
