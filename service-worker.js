@@ -6,11 +6,13 @@ self.addEventListener('install', event => {
                 '/index.html' ,
                 '/app.js' ,
                 '/manifest.json' ,
-                '/icons/icon96.png'
-				'/icons/icon192.png'
-				'/icons/icon512.png'
-				'/icons/favicon.ico'
-				'/icons/cat.jpg'
+				'/styles.css',
+                '/icons/icon96.png',
+				'/icons/icon192.png',
+				'/icons/icon512.png',
+				'/icons/favicon.ico',
+				'/icons/cat.jpg',
+				'/icons/iconButton.png',
             ]);
         })
     );
