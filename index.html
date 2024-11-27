@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кот-PWA</title>
 	<link rel="manifest" href="manifest.json">
-	<link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="icons/favicon.ico">
 	<link rel="stylesheet" href="styles.css">
 	<script src="app.js"></script>
 </head>
-<body>
+<body onload="onLoad()">
 <div class="container">
 	<h1>Добро пожаловать на страницу со смешным котом!!!</h1>
-	<p>Пока что он ничего не делает, но потом будет генерировать пароли (или что там по лабораторной работе надо...)</p>
-	<img class="cat" src='icons/cat.jpg' alt="cat"/>
+	<p>Этот невероятный смешной кот умеет сохранять ваш логин и пароль локально. Введите их в поля ниже, а затем нажмите на кнопку.</p>
+	<p>Я вас уверяю, это совершенно точно безопасно!</p>
+	<form id="input_form">
+		<label for="login">Введите ваш логин:</label>
+		<input type="text" id="login">
+		<label for="password">Введите ваш пароль:</label>
+		<input type="text" id="password">
+		<button id="cat_button" type="button" onclick="buttonClick()">Сохранить</button>
+	</form>
+	<div id="login_list">
+		<h3>Список сохранённых логинов и паролей:</h3>
+	</div>
 </div>
 </body>
 </html>

@@ -22,10 +22,45 @@ p {
     align-items: center;
 }
 
-.cat {
+.container > *{
 	display: grid;
-    justify-content: center;
+	justify-self: center;
+    align-self: center;
+}
+#input_form {
+	width:400px;
+	justify-self: center;
+    align-self: center;
+}
+
+#input_form > * {
+	display: block;
+	justify-self: center;
+    align-self: center;
+	margin-bottom: 5px;
+}
+
+#cat_button {
+	background-image: url('icons/iconButton.png');
+	background-size: auto;
+	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+	color: white;
+	width:192px;
+	height:160px;
+}
+
+#login_list {
+	display: grid;
+	justify-content: center;
     align-items: center;
-	width: 736px;
-	margin: 0 auto
+}
+#login_list > *{
+	display: block;
+	justify-self: center;
+    align-self: center;
+	margin-bottom: 5px;
 }
