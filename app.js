@@ -43,15 +43,15 @@ function generateButtonClick() {
 	let value = cryptArray[Number(String(cryptArray[0])[1])]
 	let pass = new String()
 	for (let i = 0; i < key.toString().length; i++) {
-		if (i > value.toString().length)
+		if (i >= value.toString().length)
 			break
-		let num = Number(String(key)[i])
-		
-		if (num % 2 == 0) {
-			pass = pass + String(Number(String(value)[i]))
+		let keyNum = Number(String(key)[i])
+		let valueNum = Number(String(value)[i])
+		if (keyNum % 2 == 0) {
+			pass = pass + String(valueNum)
 		}
 		else {
-			pass = pass + (Number(String(value)[i]) + 9).toString(36).toUpperCase()
+			pass = pass + (valueNum + 9).toString(36).toUpperCase()
 		}
 	}
 	
