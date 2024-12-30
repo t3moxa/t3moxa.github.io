@@ -16,20 +16,44 @@ function onLoad() {
 	}
 }
 
-function buttonClick() {
+function saveButtonClick() {
+	let url = document.getElementById("url").value;
 	let login = document.getElementById("login").value; 
 	let password = document.getElementById("password").value;
-	if ((login == "") || (password == "")) {
-		alert("Логин и/или пароль не введён!")
+	if ((url == "") || (login == "") || (password == "")) {
+		alert("URl и/или логин и/или пароль не введён!")
 	} else {
-		localStorage[login] = password;
-		addToPage(login);
+		localStorage[url] = [login, password];
+		addToPage(url);
 	}
 }
 
 function addToPage(key) {
-	let loginList = document.getElementById("login_list")
+	let urlList = document.getElementById("url_list")
 	let p = document.createElement("p");
 	p.innerText = key + " " + localStorage[key];
-	loginList.append(p);
+	urlList.append(p);
+}
+
+//Я ни разу не криптограф и не знаю насколько на самом деле сложным выходит пароль, но мне просто захотелось сделать дурацкую переусложнённую функцию для генерации :D
+function generateButtonClick() {
+	let cryptArray = new Uint32Array(10)
+	self.crypto.getRandomValues(cryptArray)
+	let key = cryptArray[Number(String(cryptArray[0])[0])]
+	let value = cryptArray[Number(String(cryptArray[0])[1])]
+	let pass = new String()
+	for (let i = 0; i < key.toString().length; i++) {
+		if (i > value.toString().length)
+			break
+		let num = Number(String(key)[i])
+		
+		if (num % 2 == 0) {
+			pass = pass + String(Number(String(value)[i]))
+		}
+		else {
+			pass = pass + (Number(String(value)[i]) + 9).toString(36).toUpperCase()
+		}
+	}
+	
+	document.getElementById("password").value = pass
 }

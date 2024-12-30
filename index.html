@@ -12,17 +12,20 @@
 <body onload="onLoad()">
 <div class="container">
 	<h1>Добро пожаловать на страницу со смешным котом!!!</h1>
-	<p>Этот невероятный, смешной кот умеет сохранять ваш логин и пароль локально. Введите их в поля ниже, а затем нажмите на кнопку.</p>
+	<p>Этот невероятный, смешной кот умеет сохранять ваш логин и пароль для заданного сайта локально. Введите их в поля ниже, а затем нажмите на кнопку.</p>
 	<p>Я вас уверяю, это совершенно точно безопасно!</p>
 	<form id="input_form">
+		<label for="login">Введите URL сайта:</label>
+		<input type="text" id="url">
 		<label for="login">Введите ваш логин:</label>
 		<input type="text" id="login">
 		<label for="password">Введите ваш пароль:</label>
 		<input type="text" id="password">
-		<button id="cat_button" type="button" onclick="buttonClick()">Сохранить</button>
+		<button id="cat_generate_button" type="button" onclick="generateButtonClick()">Сгенерировать случайный пароль</button>
+		<button id="cat_save_button" type="button" onclick="saveButtonClick()">Сохранить</button>
 	</form>
-	<div id="login_list">
-		<h3>Список сохранённых логинов и паролей:</h3>
+	<div id="url_list">
+		<h3>Список сохранённых URl, логинов и паролей:</h3>
 	</div>
 </div>
 </body>
